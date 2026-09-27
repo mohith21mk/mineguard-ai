@@ -138,7 +138,7 @@ if ($frontendCheck.Status -eq "Occupied") {
 if ($launchBackend) {
     Write-Host ""
     Write-Host "[1/2] Starting Backend API on http://127.0.0.1:8000 ..." -ForegroundColor Green
-    Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$BackendPath'; Write-Host 'MINEGUARD AI Backend running at http://127.0.0.1:8000' -ForegroundColor Green; uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload"
+    Start-Process powershell -ArgumentList "-NoExit", "-Command", "Set-Location '$BackendPath'; if (Test-Path '.venv\Scripts\Activate.ps1') { . '.venv\Scripts\Activate.ps1' }; Write-Host 'MINEGUARD AI Backend running at http://127.0.0.1:8000' -ForegroundColor Green; uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload"
     
     # Wait up to 5 seconds for backend to become healthy
     $attempts = 0

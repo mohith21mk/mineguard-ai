@@ -26,6 +26,14 @@ async def lifespan(app: FastAPI):
     # Lifespan startup check
     if not ("pytest" in sys.modules or os.getenv("TESTING") == "true"):
         check_and_guard_port(host="127.0.0.1", port=8000)
+
+    # Initialize database tables and seed demo Mine Manager user if missing
+    try:
+        from app.core.init_db import init_db
+        init_db()
+    except Exception as e:
+        logger.error(f"Error during database initialization: {e}", exc_info=True)
+
     yield
 
 
