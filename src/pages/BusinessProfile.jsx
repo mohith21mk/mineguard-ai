@@ -29,14 +29,14 @@ export default function BusinessProfile({ showToast, setModalState, onNavigate }
   const handleCancel = () => {
     setTempData({ ...profileData });
     setIsEditing(false);
-    showToast('Editing cancelled. Original profile restored.');
+    showToast('Editing cancelled. Original mine profile restored.');
   };
 
   const handleSave = () => {
     setProfileData({ ...tempData });
     updateBusinessProfile(tempData);
     setIsEditing(false);
-    showToast('Business Profile successfully updated! Analysis engine resynced.');
+    showToast('Mine Profile successfully updated! Analysis engine resynced.');
   };
 
   const handleFieldChange = (e) => {
@@ -48,7 +48,7 @@ export default function BusinessProfile({ showToast, setModalState, onNavigate }
   };
 
   const handleViewAnalysis = async () => {
-    showToast('Running Business Analysis Engine...');
+    showToast('Running Mine Compliance Analysis Engine...');
     await runAnalysis(profileData, () => {
       if (onNavigate) {
         onNavigate('business-analysis');
@@ -63,11 +63,11 @@ export default function BusinessProfile({ showToast, setModalState, onNavigate }
       {/* Top Page Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
-          <h1 className="text-xl sm:text-2xl font-bold text-slate-900 tracking-tight">
-            Business Profile
+          <h1 className="text-xl sm:text-2xl font-bold text-slate-100 tracking-tight">
+            Mine Profile & Lease Governance
           </h1>
-          <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
-            Manage your business information to receive personalized compliance recommendations.
+          <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
+            Manage your coal mine lease, DGMS regional parameters, and operational data for statutory compliance monitoring.
           </p>
         </div>
 

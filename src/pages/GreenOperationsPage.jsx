@@ -479,7 +479,7 @@ export default function GreenOperationsPage({ showToast, onNavigate, _setModalSt
       {activeTab === 'impact' && (
         <div className="space-y-4">
           <div className="p-4 rounded-xl bg-teal-950/40 border border-teal-800/60 text-xs text-slate-300">
-            <strong>Empirical Measurement Verification:</strong> POWER HOUSE stores baseline measurements before executing human-approved tasks, and compares them against actual post-implementation telemetry readings.
+            <strong>Empirical Measurement Verification:</strong> MINEGUARD AI stores baseline measurements before executing human-approved tasks, and compares them against actual post-implementation telemetry readings.
           </div>
 
           <div className="space-y-3">

@@ -126,4 +126,4 @@ def get_current_user_status(
 @router.post("/logout")
 def logout():
     """Confirms session termination."""
-    return {"message": "Successfully signed out from POWER HOUSE."}
+    return {"message": "Successfully signed out from MINEGUARD AI."}

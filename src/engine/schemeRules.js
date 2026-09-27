@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Government Scheme Matching Rules
+ * MINEGUARD AI Business Analysis Engine - Government Scheme Matching Rules
  */
 
 import { isTrue } from '../utils/analysisHelpers';

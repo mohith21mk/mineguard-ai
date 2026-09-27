@@ -1,5 +1,5 @@
 """
-Negative Category Isolation Test Suite for POWER HOUSE Hybrid Regulatory Vector RAG.
+Negative Category Isolation Test Suite for MINEGUARD AI Hybrid Regulatory Vector RAG.
 Verifies that regulatory evidence retrieved for a business in one category
 NEVER leaks or cites statutory provisions from conflicting categories:
 - Textile queries NEVER return Food Safety (FSSAI) or Jewellery (HUID/PMLA) citations.

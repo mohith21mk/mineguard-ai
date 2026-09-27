@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Approval Rules Engine
+ * MINEGUARD AI Business Analysis Engine - Approval Rules Engine
  */
 
 import { AUTHORITIES, CATEGORIES } from '../data/businessRules';

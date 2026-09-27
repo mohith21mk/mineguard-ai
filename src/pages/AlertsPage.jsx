@@ -56,10 +56,10 @@ export default function AlertsPage({ onNavigate, showToast, setModalState }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Alerts &amp; Notifications
+            Mine Safety &amp; Regulatory Alerts
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            Stay informed about statutory compliance deadlines, inspections, and regulatory notices.
+            Stay informed about DGMS statutory deadlines, hazardous environmental thresholds, and compliance notices.
           </p>
         </div>
 

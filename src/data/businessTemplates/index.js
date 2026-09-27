@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Business Template Registry
+ * MINEGUARD AI Business Analysis Engine - Business Template Registry
  *
  * Factory / Manufacturing continues to use the existing deterministic
  * rule engine (src/engine/businessAnalyzer.js) and its existing static

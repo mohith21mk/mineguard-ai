@@ -54,7 +54,7 @@ export default function Sidebar({
   const { businessTemplateBundle, analysisResult, resetOnboarding } = useBusinessAnalysis();
   const [tooltip, setTooltip] = useState(null);
 
-  const userName = auth?.user?.fullName || 'Business Owner';
+  const userName = auth?.user?.fullName || 'Mine Manager';
   const userInitials = auth?.user?.fullName
     ? auth.user.fullName
         .trim()
@@ -63,12 +63,12 @@ export default function Sidebar({
         .slice(0, 2)
         .join('')
         .toUpperCase()
-    : 'BO';
+    : 'MM';
 
-  const businessName = analysisResult?.businessSummary?.businessName || 'Tiruppur Textile Works';
-  const categoryLabel = businessTemplateBundle?.meta?.categoryLabel || 'Clothing & Textile Retail';
-  const city = analysisResult?.businessSummary?.city || 'Tiruppur';
-  const state = analysisResult?.businessSummary?.state || 'Tamil Nadu';
+  const businessName = analysisResult?.businessSummary?.businessName || 'North Karanpura Coal Block 04 [DEMO DATA]';
+  const categoryLabel = businessTemplateBundle?.meta?.categoryLabel || 'Opencast Coal Mining (OCP) [DEMO DATA]';
+  const city = analysisResult?.businessSummary?.city || 'Ranchi';
+  const state = analysisResult?.businessSummary?.state || 'Jharkhand';
   const locationString = `${city}, ${state}`;
 
   const unreadAlertsCount = (businessTemplateBundle?.alertsList || []).filter((a) => !a.read).length;
@@ -107,8 +107,8 @@ export default function Sidebar({
         {/* 1. TOP: Brand Header (Never scrolls, compact 44px) */}
         {isCollapsed ? (
           <div className="h-11 relative flex items-center justify-between border-b border-[#1E293B] px-1.5 shrink-0">
-            <div className="w-6 h-6 rounded-md overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center p-0.5 shrink-0" title="POWER HOUSE">
-              <img src="/logo.png" alt="POWER HOUSE" className="w-full h-full object-contain" />
+            <div className="w-6 h-6 rounded-md overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center p-0.5 shrink-0" title="MINEGUARD AI">
+              <img src="/logo.png" alt="MINEGUARD AI" className="w-full h-full object-contain" />
             </div>
             <button
               onClick={onToggleCollapse}
@@ -123,14 +123,14 @@ export default function Sidebar({
           <div className="h-11 relative flex items-center justify-between border-b border-[#1E293B] px-2.5 shrink-0">
             <div className="flex items-center gap-1.5 min-w-0 pr-6">
               <div className="w-6 h-6 rounded-md overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center shadow-sm shadow-amber-500/10 shrink-0 p-0.5">
-                <img src="/logo.png" alt="POWER HOUSE" className="w-full h-full object-contain" />
+                <img src="/logo.png" alt="MINEGUARD AI" className="w-full h-full object-contain" />
               </div>
               <div className="min-w-0">
                 <div className="text-white font-bold text-[11px] tracking-tight leading-none uppercase truncate">
-                  POWER HOUSE
+                  MINEGUARD AI
                 </div>
-                <div className="text-[8.5px] font-medium text-slate-400 mt-0.5 tracking-normal truncate">
-                  Compliance. Simplified.
+                <div className="text-[8.5px] font-medium text-amber-400/90 mt-0.5 tracking-normal truncate">
+                  Coal Mine Governance
                 </div>
               </div>
             </div>

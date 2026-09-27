@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Core Analyzer Orchestrator
+ * MINEGUARD AI Business Analysis Engine - Core Analyzer Orchestrator
  */
 
 import { runApprovalRules } from './approvalRules';

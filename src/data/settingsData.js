@@ -1,9 +1,9 @@
-﻿export const initialSettings = {
+export const initialSettings = {
   business: {
-    name: 'Powerhouse Industries',
-    industry: 'Manufacturing',
-    location: 'Mumbai, Maharashtra',
-    size: 'Medium Enterprise (85 Employees)'
+    name: 'North Karanpura Coal Block 04 [DEMO DATA]',
+    industry: 'Opencast Coal Mining (OCP)',
+    location: 'Ranchi, Jharkhand',
+    size: 'Major Mining Lease (1,250 Statutory Personnel)'
   },
   notifications: {
     emailNotifications: true,
@@ -16,9 +16,9 @@
     sidebar: 'Expanded',
   },
   about: {
-    platform: 'POWER HOUSE',
-    subtitle: 'Business Intelligence Platform',
-    version: '1.0.0 Prototype',
-    build: 'Frontend Demo (Production Build)'
+    platform: 'MINEGUARD AI',
+    subtitle: 'AI-Powered Smart Governance & Compliance Monitoring for Coal Mines (SIH26024)',
+    version: '0.1.0 Foundation',
+    build: 'SIH 2026 Core Release'
   }
 };

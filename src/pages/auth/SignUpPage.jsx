@@ -115,14 +115,14 @@ export default function SignUpPage({ onNavigateToLogin, onSuccess }) {
             {/* Brand Mark */}
             <div className="flex items-center gap-3 mb-8">
               <div className="w-11 h-11 rounded-xl overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center shadow-lg shadow-amber-500/10 shrink-0 p-1">
-                <img src="/logo.png" alt="POWER HOUSE" className="w-full h-full object-contain" />
+                <img src="/logo.png" alt="MINEGUARD AI" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="text-sm font-bold text-white tracking-widest uppercase block leading-none">
-                  POWER HOUSE
+                  MINEGUARD AI
                 </span>
-                <span className="text-[11px] text-slate-400 font-medium tracking-normal mt-1 block">
-                  Compliance. Simplified.
+                <span className="text-[10px] text-amber-400/90 font-medium tracking-normal mt-1 block">
+                  AI-Powered Smart Governance for Coal Mines
                 </span>
               </div>
             </div>
@@ -130,10 +130,10 @@ export default function SignUpPage({ onNavigateToLogin, onSuccess }) {
             {/* Value Proposition Headline */}
             <div className="space-y-2 mb-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
-                Start with your business.
+                Start with your mine site.
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Create your POWER HOUSE account and build a compliance workspace tailored to your business.
+                Create your MINEGUARD AI account and initialize a statutory governance workspace tailored to your coal mine operation.
               </p>
             </div>
 
@@ -205,10 +205,10 @@ export default function SignUpPage({ onNavigateToLogin, onSuccess }) {
             <div className="w-full max-w-md mx-auto">
               <div className="space-y-1 mb-6">
                 <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  Create your POWER HOUSE account
+                  Create your MINEGUARD AI account
                 </h1>
                 <p className="text-xs text-slate-400">
-                  Build your compliance workspace around your business.
+                  Build your smart compliance and safety workspace for your mine site.
                 </p>
               </div>
 

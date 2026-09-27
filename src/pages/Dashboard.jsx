@@ -54,41 +54,41 @@ export default function Dashboard({ modalState: _modalState, setModalState, onNa
   const businessName =
     analysisResult?.businessSummary?.businessName ||
     businessTemplateBundle?.meta?.defaultBusinessName ||
-    'Tiruppur Textile Works';
+    'North Karanpura Coal Block 04 [DEMO DATA]';
 
   const categoryLabel =
     analysisResult?.businessSummary?.industry ||
     businessTemplateBundle?.meta?.categoryLabel ||
-    'Clothing & Textile Manufacturing';
+    'Opencast Coal Mining (OCP) [DEMO DATA]';
 
-  const city = analysisResult?.businessSummary?.city || 'Tiruppur';
-  const state = analysisResult?.businessSummary?.state || 'Tamil Nadu';
+  const city = analysisResult?.businessSummary?.city || 'Ranchi';
+  const state = analysisResult?.businessSummary?.state || 'Jharkhand';
   const locationString = `${city}, ${state}`;
 
   const annualTurnover =
     analysisResult?.businessSummary?.annualTurnover ||
     businessTemplateBundle?.meta?.annualTurnover ||
-    '₹4.80 Cr';
+    '3.5 MTPA Capacity [DEMO DATA]';
 
   const gstin =
     analysisResult?.businessSummary?.gstin ||
     businessTemplateBundle?.meta?.gstinPlaceholder ||
-    'Pending Registration';
+    'JHK-CL-OCP-2026-004';
 
   const udyamNumber =
     analysisResult?.businessSummary?.udyamNumber ||
     businessTemplateBundle?.meta?.udyamPlaceholder ||
-    'Pending Registration';
+    'DGMS/EZ/RNC/CMR-1049';
 
   const employees =
     analysisResult?.businessSummary?.employees ||
     businessTemplateBundle?.meta?.employees ||
-    25;
+    1250;
 
   const constitution =
     businessTemplateBundle?.meta?.constitution ||
     analysisResult?.businessSummary?.businessType ||
-    'Proprietorship';
+    'Public Sector Undertaking / CIL Joint Venture';
 
   const imageSrc =
     getBusinessImage(businessCategory || businessTemplateBundle?.meta?.key || analysisResult?.businessSummary?.businessCategory) ||
@@ -278,13 +278,13 @@ export default function Dashboard({ modalState: _modalState, setModalState, onNa
                   onClick={() => onNavigate && onNavigate('business-profile')}
                   className="h-7 px-2.5 rounded-md bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs whitespace-nowrap transition-colors cursor-pointer shadow-sm shadow-blue-500/20 flex items-center"
                 >
-                  View Business Profile
+                  View Mine Profile
                 </button>
                 <button
                   onClick={() => onNavigate && onNavigate('business-profile')}
                   className="h-7 px-2.5 rounded-md bg-[#141C2B] hover:bg-[#1E293B] text-slate-300 hover:text-white border border-slate-700 text-xs font-medium whitespace-nowrap transition-colors cursor-pointer flex items-center"
                 >
-                  Edit Business
+                  Edit Mine Details
                 </button>
               </div>
             </div>
@@ -296,24 +296,24 @@ export default function Dashboard({ modalState: _modalState, setModalState, onNa
             <Building className="w-24 h-24 text-slate-800/10 absolute right-0 bottom-0 pointer-events-none" />
 
             <h3 className="text-xs font-bold text-white tracking-wider uppercase mb-2">
-              Business Snapshot
+              Mine Site Snapshot
             </h3>
 
             <div className="space-y-1.5 relative z-10 text-xs">
               <div className="flex items-center justify-between gap-3">
-                <span className="text-slate-400 font-medium shrink-0">Constitution</span>
+                <span className="text-slate-400 font-medium shrink-0">Operator</span>
                 <span className="text-slate-100 font-semibold text-right whitespace-nowrap" title={constitution}>{constitution}</span>
               </div>
               <div className="flex items-center justify-between gap-3">
-                <span className="text-slate-400 font-medium shrink-0">GSTIN</span>
+                <span className="text-slate-400 font-medium shrink-0">Lease ID</span>
                 <span className="text-slate-100 font-mono font-medium text-right whitespace-nowrap" title={gstin}>{gstin}</span>
               </div>
               <div className="flex items-center justify-between gap-3">
-                <span className="text-slate-400 font-medium shrink-0">Udyam</span>
+                <span className="text-slate-400 font-medium shrink-0">DGMS Code</span>
                 <span className="text-slate-100 font-mono font-medium text-right whitespace-nowrap" title={udyamNumber}>{udyamNumber}</span>
               </div>
               <div className="flex items-center justify-between gap-3">
-                <span className="text-slate-400 font-medium shrink-0">Employees</span>
+                <span className="text-slate-400 font-medium shrink-0">Workforce</span>
                 <span className="text-slate-100 font-semibold text-right whitespace-nowrap">{employees}</span>
               </div>
             </div>
@@ -464,22 +464,22 @@ export default function Dashboard({ modalState: _modalState, setModalState, onNa
         </div>
       </section>
 
-      {/* ROW 2.5: Unified Business Control Tower (4 Pillars in 1 Row) */}
-      <section aria-label="Unified Business Control Tower" className="bg-[#111827] border border-[#1E293B] rounded-lg p-3 sm:p-3.5 shadow-sm space-y-2.5">
+      {/* ROW 2.5: Mine Governance Control Tower (4 Pillars in 1 Row) */}
+      <section aria-label="Mine Governance Control Tower" className="bg-[#111827] border border-[#1E293B] rounded-lg p-3 sm:p-3.5 shadow-sm space-y-2.5">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-slate-800">
           <div className="flex items-center gap-2.5">
-            <div className="w-7.5 h-7.5 rounded-lg bg-blue-950/80 border border-blue-800 text-blue-400 flex items-center justify-center shrink-0">
+            <div className="w-7.5 h-7.5 rounded-lg bg-amber-950/80 border border-amber-800 text-amber-400 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-4 h-4" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-[10px] uppercase font-bold tracking-wider text-blue-400">
-                  UNIFIED BUSINESS CONTROL TOWER
+                <span className="text-[10px] uppercase font-bold tracking-wider text-amber-400">
+                  MINE GOVERNANCE CONTROL TOWER
                 </span>
                 <span className="text-slate-500">•</span>
-                <span className="text-[10.5px] text-slate-400">Cross-Domain Autonomous Governance</span>
+                <span className="text-[10.5px] text-slate-400">DGMS &amp; Statutory Mine Monitoring</span>
               </div>
-              <h3 className="text-xs sm:text-[13.5px] font-bold text-white leading-tight">Continuous Compliance, Supply, Workforce &amp; Sustainability Telemetry</h3>
+              <h3 className="text-xs sm:text-[13.5px] font-bold text-white leading-tight">Continuous Regulatory Clearances, Environmental, Safety &amp; Production Telemetry</h3>
             </div>
           </div>
 
@@ -594,9 +594,9 @@ export default function Dashboard({ modalState: _modalState, setModalState, onNa
         <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs border-t border-slate-800/80">
           <div className="flex items-center gap-2 text-slate-300 min-w-0 flex-1">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse shrink-0" />
-            <span className="text-slate-400 text-xs shrink-0">Control Tower Priority:</span>
+            <span className="text-slate-400 text-xs shrink-0">Mine Governance Priority:</span>
             <span className="text-slate-200 text-xs truncate" title="All statutory, inventory, and competency parameters operating within benchmark parameters.">
-              All statutory, inventory, and competency parameters operating within benchmark parameters.
+              All statutory DGMS, environmental emissions, and workforce safety parameters operating within benchmark limits.
             </span>
           </div>
           <div className="flex items-center gap-1.5 shrink-0">
@@ -1087,7 +1087,7 @@ export default function Dashboard({ modalState: _modalState, setModalState, onNa
               <div className="space-y-1.5 min-w-0">
                 <div className="flex items-center justify-between gap-1">
                   <div className="text-[11px] font-semibold text-slate-300 truncate">Top Compliance Risks</div>
-                  <span className="text-[9.5px] text-blue-400 font-medium shrink-0">Control Tower</span>
+                  <span className="text-[9.5px] text-amber-400 font-medium shrink-0">Mine Control</span>
                 </div>
                 <div className="min-h-[105px] h-full bg-[#141C2B]/60 rounded-lg p-1.5 flex flex-col justify-between border border-slate-800/60 overflow-hidden">
                   <button

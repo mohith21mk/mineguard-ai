@@ -387,8 +387,8 @@ class ResourceWasteAgent(BaseGreenAgent):
                             "observation_time": datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S")
                         }
                     ],
-                    "cause": "Routine regulatory registers (Form 21, ESI records, Wage slips) are maintained in printed hard-copy binders.",
-                    "recommended_action": "Migrate physical factory registers into POWER HOUSE Document Vault with cryptographic SHA-256 evidence hashing.",
+                    "cause": "Routine regulatory registers (statutory logs, DGMS forms, inspection records) are maintained in printed hard-copy binders.",
+                    "recommended_action": "Migrate physical operational registers into MINEGUARD AI Document Vault with cryptographic SHA-256 evidence hashing.",
                     "estimated_energy_impact": None,
                     "estimated_cost_impact": cost_impact,
                     "estimated_carbon_impact": carbon_impact,

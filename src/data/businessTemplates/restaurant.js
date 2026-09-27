@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Restaurant / Food Business Template
+ * MINEGUARD AI Business Analysis Engine - Restaurant / Food Business Template
  *
  * Hackathon prototype data. Requirements vary by state, turnover, seating
  * capacity, and business structure - entries are marked "Applicable where

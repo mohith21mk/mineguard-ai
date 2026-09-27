@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Jewellery Store Template
+ * MINEGUARD AI Business Analysis Engine - Jewellery Store Template
  *
  * Hackathon prototype data. Requirements vary by state, turnover, and
  * business structure - entries are marked "Applicable where required"

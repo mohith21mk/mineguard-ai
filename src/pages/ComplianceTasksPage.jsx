@@ -86,10 +86,10 @@ export default function ComplianceTasksPage({ showToast, setModalState }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Compliance Tasks
+            Statutory Compliance Actions
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            Track and execute your business compliance calendars and statutory filings.
+            Track and execute mandatory coal mine statutory returns, safety inspections, and DGMS filings.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function ComplianceTasksPage({ showToast, setModalState }) {
           className="self-start sm:self-auto text-xs font-semibold"
         >
           <Plus className="w-3.5 h-3.5" />
-          <span>Add Task</span>
+          <span>Log Compliance Action</span>
         </Button>
       </div>
 

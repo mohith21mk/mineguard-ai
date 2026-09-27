@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Business Analysis Service
+ * MINEGUARD AI Business Analysis Engine - Business Analysis Service
  * 
  * Service Layer abstraction decoupling UI from specific analysis rule engines.
  * Ready for future backend / AI API replacements without modifying UI callers.

@@ -1,5 +1,5 @@
 """
-Unit and integration tests for POWER HOUSE Hybrid Regulatory Vector RAG.
+Unit and integration tests for MINEGUARD AI Hybrid Regulatory Vector RAG.
 Verifies:
 - 384-dimensional dense semantic embeddings (StatutoryDenseEmbeddingFunction)
 - Statutory-aware hierarchy chunking (Act, Chapter, Section, Subsection)

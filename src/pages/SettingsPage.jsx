@@ -78,23 +78,23 @@ export default function SettingsPage({ onNavigateToProfile, showToast, setModalS
           Settings
         </h1>
         <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-          Manage your POWER HOUSE platform configuration and compliance parameters.
+          Manage your MINEGUARD AI platform configuration and statutory coal compliance parameters.
         </p>
       </div>
 
-      {/* Section 1: Business Settings */}
+      {/* Section 1: Mine Site Settings */}
       <div className="bg-[#111827] rounded-2xl border border-[#1E293B] shadow-2xs p-5 sm:p-6">
         <div className="flex items-center justify-between pb-4 border-b border-slate-800">
           <div className="flex items-center gap-2.5">
-            <div className="p-1.5 rounded-lg bg-blue-950 text-blue-400 border border-blue-800">
+            <div className="p-1.5 rounded-lg bg-amber-950 text-amber-400 border border-amber-800">
               <Building className="w-4 h-4" />
             </div>
             <div>
               <h2 className="text-base font-bold text-white leading-none">
-                Business Settings
+                Mine Site Settings
               </h2>
               <p className="text-xs text-slate-400 mt-1">
-                Primary organization configuration
+                Primary mining organization and lease configuration
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function SettingsPage({ onNavigateToProfile, showToast, setModalS
               className="text-xs font-semibold text-slate-200"
             >
               <Repeat className="w-3.5 h-3.5" />
-              <span>Switch Business Type</span>
+              <span>Switch Mine Profile</span>
             </Button>
             <Button
               variant="secondary"
@@ -116,7 +116,7 @@ export default function SettingsPage({ onNavigateToProfile, showToast, setModalS
               className="text-xs font-semibold text-blue-400 hover:text-blue-300"
             >
               <Pencil className="w-3.5 h-3.5" />
-              <span>Edit Business Profile</span>
+              <span>Edit Mine Profile</span>
             </Button>
           </div>
         </div>
@@ -303,15 +303,15 @@ export default function SettingsPage({ onNavigateToProfile, showToast, setModalS
         </div>
       </div>
 
-      {/* Section 5: About POWER HOUSE */}
+      {/* Section 5: About MINEGUARD AI */}
       <div className="bg-[#111827] rounded-2xl p-5 sm:p-6 text-white border border-[#1E293B] shadow-md">
         <div className="flex items-center gap-3 mb-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-black text-white text-sm">
-            PH
+          <div className="w-8 h-8 rounded-lg bg-amber-600 flex items-center justify-center font-black text-white text-sm">
+            MG
           </div>
           <div>
             <h3 className="font-bold text-base text-white">{settings.about.platform}</h3>
-            <span className="text-xs text-slate-400">Compliance. Simplified.</span>
+            <span className="text-xs text-slate-400">AI-Powered Smart Governance for Coal Mines (SIH26024)</span>
           </div>
         </div>
 

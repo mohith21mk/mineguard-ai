@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Clothing & Textile Template
+ * MINEGUARD AI Business Analysis Engine - Clothing & Textile Template
  *
  * Modeled on "Tiruppur Textile Works" matching the enterprise compliance
  * dashboard reference architecture.

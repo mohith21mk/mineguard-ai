@@ -60,10 +60,10 @@ export default function ApprovalsLicences({ onNavigateToRoadmap, setModalState, 
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Licences &amp; Approvals
+            Statutory Clearances &amp; Permits
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            Manage all approvals, licences, and statutory mandates applicable to your business.
+            Manage all DGMS permissions, MoEFCC environmental clearances (EC/FC), SPCB consent (CTO/CTE), and mining leases.
           </p>
         </div>
 
@@ -72,12 +72,12 @@ export default function ApprovalsLicences({ onNavigateToRoadmap, setModalState, 
           size="sm"
           onClick={() => {
             onNavigateToRoadmap();
-            showToast('Navigated to Approval Roadmap.');
+            showToast('Navigated to Clearance Roadmap.');
           }}
           className="self-start sm:self-auto text-xs font-semibold"
         >
           <Milestone className="w-3.5 h-3.5" />
-          <span>View Approval Roadmap</span>
+          <span>View Clearance Roadmap</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Button>
       </div>
@@ -86,7 +86,7 @@ export default function ApprovalsLicences({ onNavigateToRoadmap, setModalState, 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
         <div className="bg-[#111827] rounded-2xl border border-[#1E293B] shadow-2xs p-4 sm:p-5 flex items-center justify-between">
           <div>
-            <div className="text-xs font-semibold text-slate-400">Total Licences</div>
+            <div className="text-xs font-semibold text-slate-400">Total Clearances</div>
             <div className="text-xl sm:text-2xl font-black text-white mt-1">{approvalsStats.total}</div>
             <div className="text-[11px] text-slate-400 mt-0.5">Statutory mapped</div>
           </div>
@@ -99,7 +99,7 @@ export default function ApprovalsLicences({ onNavigateToRoadmap, setModalState, 
           <div>
             <div className="text-xs font-semibold text-slate-400">Completed / Active</div>
             <div className="text-xl sm:text-2xl font-black text-emerald-400 mt-1">{approvalsStats.completed || 6}</div>
-            <div className="text-[11px] text-slate-400 mt-0.5">Licences active</div>
+            <div className="text-[11px] text-slate-400 mt-0.5">Clearances active</div>
           </div>
           <div className="w-10 h-10 rounded-xl bg-emerald-950/80 text-emerald-400 flex items-center justify-center border border-emerald-800/80 shrink-0">
             <CheckCircle2 className="w-5 h-5" />

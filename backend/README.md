@@ -1,6 +1,6 @@
-# POWER HOUSE Backend — FastAPI & PostgreSQL Foundation
+# MINEGUARD AI Backend — FastAPI & Data Layer Foundation
 
-Production-ready backend API and persistent data layer for **POWER HOUSE** — an intelligent enterprise compliance and regulatory approval management platform.
+Production-ready backend API and persistent data layer for **MINEGUARD AI** — an AI-powered smart governance & compliance monitoring platform for coal mines (SIH 2026 Problem Statement SIH26024).
 
 ---
 
@@ -10,10 +10,10 @@ Production-ready backend API and persistent data layer for **POWER HOUSE** — a
 React + Vite Frontend (Port 5173)
         ↓  REST API (HTTP / JSON)
 FastAPI Backend (Port 8000)
-        ↓  Business Logic Services
-Deterministic Business Analysis Engine (Python)
+        ↓  Mining Governance Logic Services
+Statutory Coal Compliance Engine (Python)
         ↓  SQLAlchemy ORM (v2.0)
-PostgreSQL Database (with SQLite local fallback)
+PostgreSQL / SQLite Database
         ↓
 Alembic Migrations
 ```
@@ -28,7 +28,7 @@ Alembic Migrations
 - **Database Migrations**: [Alembic](https://alembic.sqlalchemy.org/)
 - **Data Validation**: [Pydantic v2](https://docs.pydantic.dev/latest/)
 - **Testing**: [Pytest](https://docs.pytest.org/) & `httpx` / `TestClient`
-- **Database**: PostgreSQL (Default) / SQLite (Zero-config local dev)
+- **Database**: PostgreSQL / SQLite (Zero-config local dev: `sqlite:///./mineguard.db`)
 
 ---
 
@@ -60,7 +60,7 @@ cp .env.example .env
 
 Default `.env` configuration:
 ```env
-APP_NAME=POWER HOUSE Backend API
+APP_NAME=MINEGUARD AI Backend API
 ENVIRONMENT=development
 DEBUG=True
 API_V1_STR=/api/v1

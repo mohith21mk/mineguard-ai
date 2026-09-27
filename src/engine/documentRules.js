@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Document Requirement Rules
+ * MINEGUARD AI Business Analysis Engine - Document Requirement Rules
  */
 
 export function runDocumentRequirementRules(profile, matchedApprovals) {

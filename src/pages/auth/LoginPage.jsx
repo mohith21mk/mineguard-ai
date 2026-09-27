@@ -79,14 +79,14 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
             {/* Brand Mark */}
             <div className="flex items-center gap-3 mb-8">
               <div className="w-11 h-11 rounded-xl overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center shadow-lg shadow-amber-500/10 shrink-0 p-1">
-                <img src="/logo.png" alt="POWER HOUSE" className="w-full h-full object-contain" />
+                <img src="/logo.png" alt="MINEGUARD AI" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="text-sm font-bold text-white tracking-widest uppercase block leading-none">
-                  POWER HOUSE
+                  MINEGUARD AI
                 </span>
-                <span className="text-[11px] text-slate-400 font-medium tracking-normal mt-1 block">
-                  Compliance. Simplified.
+                <span className="text-[10px] text-amber-400/90 font-medium tracking-normal mt-1 block">
+                  AI-Powered Smart Governance for Coal Mines
                 </span>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
                 Welcome back.
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                Sign in to manage compliance deadlines, statutory approvals, and filing tasks across your business.
+                Sign in to monitor DGMS compliance, statutory mine clearances, environmental parameters, and safety workflows across coal mine operations.
               </p>
             </div>
 
@@ -108,9 +108,9 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-white">Multi-tenant data isolation</h4>
+                  <h4 className="text-xs font-semibold text-white">DGMS & MoEFCC Regulatory Alignment</h4>
                   <p className="text-[11px] text-slate-400 mt-0.5 leading-snug">
-                    Dedicated statutory data boundaries protected by enterprise tenant isolation.
+                    Dedicated statutory compliance rules enforcing Coal Mines Regulations 2017 & Mines Act 1952.
                   </p>
                 </div>
               </div>
@@ -120,9 +120,9 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
                   <Calendar className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-white">Continuous deadline tracking</h4>
+                  <h4 className="text-xs font-semibold text-white">Continuous Statutory Monitoring</h4>
                   <p className="text-[11px] text-slate-400 mt-0.5 leading-snug">
-                    Automated calendar alerts for central, state, and labour compliance filings.
+                    Automated calendar alerts for periodic DGMS returns, safety meetings, and clearance renewals.
                   </p>
                 </div>
               </div>
@@ -132,9 +132,9 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
                   <FileText className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-semibold text-white">Unified compliance workspace</h4>
+                  <h4 className="text-xs font-semibold text-white">Mine Governance Control Tower</h4>
                   <p className="text-[11px] text-slate-400 mt-0.5 leading-snug">
-                    Single source of truth for registrations, approvals, and verified dossiers.
+                    Single source of truth for mine leases, environmental clearances (EC/CTO), and statutory dossiers.
                   </p>
                 </div>
               </div>
@@ -153,10 +153,10 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
           <div className="w-full max-w-md mx-auto">
             <div className="space-y-1 mb-6">
               <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                Sign in to POWER HOUSE
+                Sign in to MINEGUARD AI
               </h1>
               <p className="text-xs text-slate-400">
-                Enter your work credentials to access your compliance workspace.
+                Enter your mining credentials to access your compliance workspace.
               </p>
             </div>
 
@@ -322,9 +322,9 @@ export default function LoginPage({ onNavigateToSignup, onSuccess }) {
               <div className="p-3.5 bg-[#141C2B] rounded-xl border border-[#1E293B] space-y-1.5 text-slate-300">
                 <div className="text-slate-400 font-medium">Compliance Helpdesk:</div>
                 <div>Hotline: <strong className="text-white font-mono">1800-419-7000</strong></div>
-                <div>Email: <strong className="text-blue-400 font-mono">support@powerhouse.in</strong></div>
+                <div>Email: <strong className="text-amber-400 font-mono">support@mineguard.in</strong></div>
                 <div className="text-[11px] text-slate-400 pt-1 border-t border-slate-800">
-                  Please provide your registered Business PAN and primary contact number for verification.
+                  Please provide your registered Mine Lease ID and DGMS Regional Office for verification.
                 </div>
               </div>
             </div>

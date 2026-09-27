@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Business Template Helpers
+ * MINEGUARD AI Business Analysis Engine - Business Template Helpers
  *
  * Small utilities shared by every non-factory business template so that
  * stats (counts, percentages) are always derived from the actual list

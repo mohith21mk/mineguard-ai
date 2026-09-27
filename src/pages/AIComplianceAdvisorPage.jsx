@@ -441,7 +441,7 @@ All optimizations require your explicit **Human-in-the-Loop** confirmation befor
   * **Production SLA Protection**: Non-destructive resize window restricted to off-peak maintenance hours (01:00 AM – 04:00 AM).
 * **Governance Status**: Flagged as **PENDING_REVIEW** with a safety policy status of **PASS**. No automated shutdowns occur without explicit **Human-in-the-Loop** confirmation.`,
       citations: [
-        { title: 'Green Computing Policy Rule GR-COMPUTE-001', authority: 'POWER HOUSE Governance Engine', section: 'Threshold: 8% idle < 14d', verification_status: '[GREEN RULE]' },
+        { title: 'Green Computing Policy Rule GR-COMPUTE-001', authority: 'MINEGUARD AI Governance Engine', section: 'Threshold: 8% idle < 14d', verification_status: '[GREEN RULE]' },
         { title: 'National Building Code 2016 Fire Norms', authority: 'BIS Fire Directorate', section: 'Part 4 (Safety Exemption)', verification_status: '[REGULATORY SOURCE]' },
         { title: 'Business Profile Telemetry Log', authority: `${businessName}`, section: 'Observation Window: 14d', verification_status: '[BUSINESS DATA]' }
       ]
@@ -466,7 +466,7 @@ Here is the verifiable provenance trail for the flagged sustainability opportuni
 * **Audit Trail**: Action proposal hash logged in immutable \`audit_logs\` table upon approval.`,
       citations: [
         { title: 'CEA CO2 Baseline Database v19', authority: 'Central Electricity Authority (Govt of India)', section: 'Table 4.1 (Grid Emission Factor)', verification_status: '[REGULATORY SOURCE]' },
-        { title: 'Telemetry Ingestion Gateway', authority: 'POWER HOUSE Monitor', section: 'Stream: telemetry_node_04', verification_status: '[SYSTEM METRIC]' },
+        { title: 'Telemetry Ingestion Gateway', authority: 'MINEGUARD AI Monitor', section: 'Stream: telemetry_node_04', verification_status: '[SYSTEM METRIC]' },
         { title: 'Statutory Business Profile', authority: `${businessName}`, section: `ID: ${location}`, verification_status: '[BUSINESS DATA]' }
       ]
     };
@@ -490,7 +490,7 @@ If sub-metering or cloud telemetry is not connected, conservative lower-bound es
     citations: [
       { title: 'CEA Grid Emission Baseline Database v19', authority: 'CEA India', section: 'Dec 2024 Release', verification_status: '[REGULATORY SOURCE]' },
       { title: 'State Commercial Tariff Schedule', authority: 'TNERC / State Reg. Comm.', section: 'Industrial HT/LT Tariff', verification_status: '[REGULATORY SOURCE]' },
-      { title: 'Green Impact Engine Deterministic Model', authority: 'POWER HOUSE', section: 'v1.0.0-sih', verification_status: '[GREEN RULE]' }
+      { title: 'Green Impact Engine Deterministic Model', authority: 'MINEGUARD AI', section: 'v1.0.0-sih', verification_status: '[GREEN RULE]' }
     ]
   };
 }
@@ -525,7 +525,7 @@ function getSupplyChainAdvisorReply(text, supplySummary, supplyRisks, businessNa
 * **Buffer Adjustment**: Automate purchase order triggers at minimum reorder thresholds.
 * **Compliance Hold**: Require primary suppliers to upload renewed tax compliance certificates prior to next disbursement.`,
     citations: [
-      { title: 'Deterministic Supply Chain Resilience Engine', authority: 'POWER HOUSE Core', section: `Score: ${resilienceScore}/100`, verification_status: '[RULE ENGINE]' },
+      { title: 'Deterministic Supply Chain Resilience Engine', authority: 'MINEGUARD AI Core', section: `Score: ${resilienceScore}/100`, verification_status: '[RULE ENGINE]' },
       { title: 'CGST Act 2017 Section 16(2)', authority: 'CBIC / GSTN', section: 'Input Tax Credit Supplier Compliance', verification_status: '[REGULATORY SOURCE]' },
       { title: 'Supplier Network Telemetry & ERP Manifests', authority: `${businessName} Vendor Registry`, section: 'Inventory & Lead Time Telemetry', verification_status: isDemo ? '[DEMO DATA]' : '[BUSINESS DATA]' }
     ]
@@ -564,7 +564,7 @@ function getWorkforceAdvisorReply(text, workforceSummary, skillGaps, businessNam
 * **Non-Punitive Upskilling**: Assessments are strictly developmental. The AI cannot recommend termination, salary deduction, or punitive reassignment.
 * **Human-in-the-Loop Verification**: Learning proposals require explicit managerial approval before enrolment in certified academies or Skill India Digital portals.`,
     citations: [
-      { title: 'Workforce Competency & Skill Gap Model', authority: 'POWER HOUSE Intelligence', section: `Role Alignment: ${coveragePct}%`, verification_status: '[RULE ENGINE]' },
+      { title: 'Workforce Competency & Skill Gap Model', authority: 'MINEGUARD AI Intelligence', section: `Role Alignment: ${coveragePct}%`, verification_status: '[RULE ENGINE]' },
       { title: 'Rights of Persons with Disabilities Act 2016', authority: 'Ministry of Social Justice & Empowerment', section: 'Sec 20 (Equal Opportunity & Workplace Accommodations)', verification_status: '[REGULATORY SOURCE]' },
       { title: 'National Skill Qualification Framework (NSQF)', authority: 'National Council for Vocational Education & Training (NCVET)', section: 'Standard Occupational Competency Levels', verification_status: '[STATUTORY STANDARD]' },
       { title: 'Internal Worker Profile Telemetry', authority: `${businessName} HR Systems`, section: 'Synthetic Staff References', verification_status: isDemo ? '[DEMO DATA]' : '[WORKFORCE DATA]' }
@@ -597,7 +597,7 @@ function getDeterministicReply(text, cat, businessName, location, city, state) {
 * **Pradhan Mantri MUDRA Yojana**: Collateral-free working capital and equipment financing up to ₹10 Lakhs through nationalized banks.`;
     } else {
       aiReply = `Based on active food service regulations for **${businessName}** in ${location}:
-Your enterprise operations are governed under the Food Safety and Standards Act 2006, Municipal Public Health Bye-laws, and State Fire Safety norms. Ensure all employee health certificates and water potability records are maintained in your POWER HOUSE Document Vault.`;
+Your enterprise operations are governed under the Food Safety and Standards Act 2006, Municipal Public Health Bye-laws, and State Fire Safety norms. Ensure all employee health certificates and water potability records are maintained in your MINEGUARD AI Document Vault.`;
     }
   } else if (c === 'jewellery') {
     if (tLower.includes('hallmark') || tLower.includes('bis') || tLower.includes('huid')) {
@@ -668,7 +668,7 @@ Your enterprise is subject to the Factories Act 1948, State Pollution Control Bo
 * **Disposal**: Fabric cuttings and combustible packaging must be segregated and handed to authorized municipal solid waste contractors.`;
     } else {
       aiReply = `Regarding your query for **${businessName}** in ${location}:
-All textile retail operations are actively aligned with the ${state} Shops & Establishments Act, Municipal Trade Licensing, and Textile Committee quality standards. Store valid tax invoices and fire safety certificates in your POWER HOUSE Document Vault.`;
+All textile retail operations are actively aligned with the ${state} Shops & Establishments Act, Municipal Trade Licensing, and Textile Committee quality standards. Store valid tax invoices and fire safety certificates in your MINEGUARD AI Document Vault.`;
     }
   }
   return aiReply;
@@ -1000,9 +1000,9 @@ export default function AIComplianceAdvisorPage({ onNavigate, showToast, setModa
           </div>
           <div>
             <div className="flex items-center gap-2 flex-wrap">
-              <h2 className="text-xl font-bold text-slate-100">AI Compliance Advisor</h2>
-              <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-blue-950/60 text-blue-400 border border-blue-800/50">
-                Enterprise Regulatory Copilot
+              <h2 className="text-xl font-bold text-slate-100">MineGuard AI Governance Advisor</h2>
+              <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-amber-950/60 text-amber-400 border border-amber-800/50">
+                DGMS &amp; Coal Regulatory Copilot (SIH26024)
               </span>
             </div>
             <p className="text-xs text-slate-400 mt-0.5">
@@ -1019,7 +1019,7 @@ export default function AIComplianceAdvisorPage({ onNavigate, showToast, setModa
               data: {}
             })}
             className="px-3 py-1.5 rounded-xl border border-purple-800/80 bg-purple-950/40 text-purple-300 hover:text-white hover:border-purple-600 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
-            title="Inspect human-approved compliance actions for Mohith K"
+            title="Inspect human-approved compliance actions"
           >
             <History className="w-3.5 h-3.5 text-purple-400" />
             <span>Audit Trail</span>
@@ -1029,22 +1029,22 @@ export default function AIComplianceAdvisorPage({ onNavigate, showToast, setModa
             className="px-3 py-1.5 rounded-xl border border-[#1E293B] bg-[#141C2B] text-slate-300 hover:text-white hover:border-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
           >
             <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
-            <span>Active Licences</span>
+            <span>Statutory Clearances</span>
           </button>
           <button
             onClick={() => onNavigate && onNavigate('compliance-tasks')}
             className="px-3 py-1.5 rounded-xl border border-[#1E293B] bg-[#141C2B] text-slate-300 hover:text-white hover:border-slate-700 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
           >
             <Clock className="w-3.5 h-3.5 text-amber-400" />
-            <span>Tasks</span>
+            <span>Statutory Actions</span>
           </button>
           <button
             onClick={() => onNavigate && onNavigate('green-flow')}
             className="px-3 py-1.5 rounded-xl border border-emerald-800/80 bg-emerald-950/40 text-emerald-300 hover:text-white hover:border-emerald-600 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
-            title="Inspect Green Industry Flow AI"
+            title="Inspect Mine Environmental Telemetry"
           >
             <Leaf className="w-3.5 h-3.5 text-emerald-400" />
-            <span>Green Operations</span>
+            <span>Environmental Monitor</span>
           </button>
         </div>
       </div>

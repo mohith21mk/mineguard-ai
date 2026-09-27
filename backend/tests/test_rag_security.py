@@ -1,5 +1,5 @@
 """
-Security & Tenant Isolation Test Suite for POWER HOUSE Hybrid Regulatory Vector RAG.
+Security & Tenant Isolation Test Suite for MINEGUARD AI Hybrid Regulatory Vector RAG.
 Verifies:
 - Unauthenticated access to /api/v1/rag/query returns HTTP 401
 - Cross-tenant RAG queries return HTTP 403 Forbidden

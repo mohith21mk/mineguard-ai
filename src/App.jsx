@@ -49,7 +49,7 @@ function MainAppContent() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
     try {
-      return localStorage.getItem('powerhouse_sidebar_collapsed') === 'true';
+      return localStorage.getItem('mineguard_sidebar_collapsed') === 'true';
     } catch {
       return false;
     }
@@ -62,7 +62,7 @@ function MainAppContent() {
     setSidebarCollapsed((prev) => {
       const next = !prev;
       try {
-        localStorage.setItem('powerhouse_sidebar_collapsed', String(next));
+        localStorage.setItem('mineguard_sidebar_collapsed', String(next));
       } catch {
         // ignore localStorage errors
       }
@@ -112,9 +112,9 @@ function MainAppContent() {
   const handleContactSupport = () => {
     setModalState({
       isOpen: true,
-      title: 'Powerhouse Dedicated Support',
+      title: 'MINEGUARD AI Dedicated Support',
       type: 'support',
-      data: { message: 'Our compliance advisors are available 24/7 for filing assistance.' }
+      data: { message: 'Our DGMS compliance advisors and mining safety experts are available 24/7 for filing assistance.' }
     });
   };
 
@@ -130,7 +130,7 @@ function MainAppContent() {
   const handleOpenProfile = (section) => {
     if (section === 'business') {
       setActiveNav('business-profile');
-      showToast('Switched to Business Profile');
+      showToast('Switched to Mine Profile');
       return;
     }
     if (section === 'security') {
@@ -147,7 +147,7 @@ function MainAppContent() {
   };
 
   return (
-    <div className="h-screen h-[100dvh] w-screen overflow-hidden flex bg-[#0B0F17] font-sans antialiased text-slate-100 selection:bg-blue-600 selection:text-white">
+    <div className="h-screen h-[100dvh] w-screen overflow-hidden flex bg-[#0B0F17] font-sans antialiased text-slate-100 selection:bg-amber-600 selection:text-white">
       {/* Toast Notification Container */}
       {toastMessage && (
         <div className="fixed bottom-5 right-5 z-50 bg-[#111827] text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-2xl border border-[#1E293B] flex items-center gap-3 animate-in fade-in slide-in-from-bottom-3 duration-200">
@@ -168,14 +168,14 @@ function MainAppContent() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
           <div className="bg-[#111827] rounded-3xl max-w-md w-full p-6 shadow-2xl border border-[#1E293B] space-y-5 animate-in zoom-in-95 duration-200">
             <div className="text-center space-y-1.5">
-              <div className="w-12 h-12 rounded-2xl bg-blue-900/30 text-blue-400 border border-blue-800/50 flex items-center justify-center mx-auto shadow-xs">
+              <div className="w-12 h-12 rounded-2xl bg-amber-900/30 text-amber-400 border border-amber-800/50 flex items-center justify-center mx-auto shadow-xs">
                 <BrainCircuit className="w-6 h-6 animate-pulse" />
               </div>
               <h3 className="font-bold text-slate-100 text-base">
-                Executing Business Analysis Engine
+                Executing Mine Compliance Analysis Engine
               </h3>
               <p className="text-xs text-slate-400">
-                Evaluating deterministic compliance rules for {activeBusinessName}...
+                Evaluating statutory DGMS compliance rules for {activeBusinessName}...
               </p>
             </div>
 
@@ -511,7 +511,7 @@ function MainAppContent() {
                 </div>
                 <div>
                   <h3 className="font-bold text-slate-100 text-base">{modalState.title}</h3>
-                  <span className="text-[11px] text-slate-400">POWER HOUSE Intelligence View</span>
+                  <span className="text-[11px] text-slate-400">MINEGUARD AI Governance View</span>
                 </div>
               </div>
               <button
@@ -729,7 +729,7 @@ function MainAppContent() {
                   <p className="text-slate-300">{modalState.data?.message}</p>
                   <div className="p-3 bg-[#141C2B] rounded-xl border border-[#1E293B] space-y-1 text-slate-300">
                     <div>Toll-free Hotline: <strong className="text-slate-100">1800-419-7000</strong></div>
-                    <div>Support Desk: <strong className="text-slate-100">compliance@powerhouse.in</strong></div>
+                    <div>Support Desk: <strong className="text-slate-100">compliance@mineguard.in</strong></div>
                     <div>Working Hours: <strong className="text-slate-100">Mon - Sat (9:00 AM - 7:00 PM IST)</strong></div>
                   </div>
                 </div>
@@ -869,19 +869,19 @@ function AppGate() {
       <div className="min-h-screen bg-[#0B0F17] flex flex-col items-center justify-center font-sans antialiased text-slate-100 p-4 selection:bg-blue-600 selection:text-white">
         <div className="flex flex-col items-center space-y-4 animate-in fade-in duration-300">
           <div className="w-14 h-14 rounded-2xl overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center shadow-xl shadow-amber-500/10 p-1.5">
-            <img src="/logo.png" alt="POWER HOUSE" className="w-full h-full object-contain" />
+            <img src="/logo.png" alt="MINEGUARD AI" className="w-full h-full object-contain" />
           </div>
           <div className="text-center space-y-1">
             <span className="text-sm font-bold text-white tracking-widest uppercase block leading-none">
-              POWER HOUSE
+              MINEGUARD AI
             </span>
-            <span className="text-[11px] text-slate-400 font-medium tracking-normal mt-1 block">
-              Compliance. Simplified.
+            <span className="text-[11px] text-amber-400 font-medium tracking-normal mt-1 block">
+              AI-Powered Smart Governance for Coal Mines
             </span>
           </div>
-          <div className="flex items-center gap-2.5 text-xs text-blue-400 pt-3">
-            <Loader2 className="w-4 h-4 animate-spin text-blue-400" />
-            <span className="font-medium text-slate-300">Loading your workspace…</span>
+          <div className="flex items-center gap-2.5 text-xs text-amber-400 pt-3">
+            <Loader2 className="w-4 h-4 animate-spin text-amber-400" />
+            <span className="font-medium text-slate-300">Loading mine governance workspace…</span>
           </div>
         </div>
       </div>

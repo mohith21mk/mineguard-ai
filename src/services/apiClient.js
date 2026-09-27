@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE API Client Layer
+ * MINEGUARD AI API Client Layer
  * 
  * Configurable REST client for communicating with the FastAPI backend.
  * Provides resilient fallbacks if the backend server is temporarily unreachable.

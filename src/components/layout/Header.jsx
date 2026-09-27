@@ -21,10 +21,10 @@ export default function Header({
 }) {
   const auth = useAuth();
   const { analysisResult, businessTemplateBundle, resetOnboarding } = useBusinessAnalysis();
-  const businessName = analysisResult?.businessSummary?.businessName || 'Tiruppur Textile Works';
+  const businessName = analysisResult?.businessSummary?.businessName || 'North Karanpura Coal Block 04 [DEMO DATA]';
 
-  const userName = auth?.user?.fullName || 'Business Owner';
-  const firstName = auth?.user?.fullName ? auth.user.fullName.trim().split(' ')[0] : 'Business Owner';
+  const userName = auth?.user?.fullName || 'Mine Manager';
+  const firstName = auth?.user?.fullName ? auth.user.fullName.trim().split(' ')[0] : 'Mine Manager';
   const userInitials = auth?.user?.fullName
     ? auth.user.fullName
         .trim()
@@ -33,7 +33,7 @@ export default function Header({
         .slice(0, 2)
         .join('')
         .toUpperCase()
-    : 'BO';
+    : 'MM';
 
   const severityToType = { critical: 'warning', upcoming: 'warning', information: 'info' };
   const initialNotifications = (businessTemplateBundle?.alertsList || []).slice(0, 5).map((alert) => ({
@@ -255,8 +255,8 @@ export default function Header({
                   onClick={handleBusinessSwitch}
                   className="w-full px-2.5 py-1.5 text-left text-[11px] text-slate-200 hover:bg-[#141C2B] rounded-lg flex items-center gap-1.5 cursor-pointer font-medium"
                 >
-                  <Building className="w-3.5 h-3.5 text-blue-400" />
-                  <span>Switch / Describe New Business</span>
+                  <Building className="w-3.5 h-3.5 text-amber-400" />
+                  <span>Switch / Register Mine Site</span>
                 </button>
               </div>
             </div>
@@ -270,15 +270,15 @@ export default function Header({
             className="h-7 flex items-center gap-1.5 px-1.5 rounded-md hover:bg-[#141C2B] border border-[#1E293B] transition-colors cursor-pointer group"
             aria-label="User Profile Menu"
           >
-            <div className="w-5 h-5 rounded-full bg-blue-600 text-white font-bold text-[8.5px] flex items-center justify-center shrink-0">
+            <div className="w-5 h-5 rounded-full bg-amber-600 text-white font-bold text-[8.5px] flex items-center justify-center shrink-0">
               {userInitials}
             </div>
             <div className="text-left hidden xl:block pr-0.5">
               <div className="text-[10.5px] font-semibold text-white leading-none">
                 {userName.toUpperCase()}
               </div>
-              <div className="text-[8.5px] text-slate-400 mt-0.5 leading-none">
-                Business Owner
+              <div className="text-[8.5px] text-amber-400/90 font-medium mt-0.5 leading-none">
+                Mine Manager
               </div>
             </div>
             <ChevronDown className="w-2.5 h-2.5 text-slate-400 group-hover:text-slate-200 transition-colors shrink-0" />

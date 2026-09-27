@@ -14,7 +14,7 @@ import { useBusinessAnalysis } from '../context/BusinessAnalysisContext';
 
 export default function ReportsPage({ showToast, setModalState }) {
   const { analysisResult, businessTemplateBundle } = useBusinessAnalysis();
-  const businessName = analysisResult?.businessSummary?.businessName || 'Tiruppur Textile Works';
+  const businessName = analysisResult?.businessSummary?.businessName || 'North Karanpura Coal Block 04 [DEMO DATA]';
   const complianceScore = analysisResult?.summary?.complianceScore ?? 92;
 
   const approvalsStats = businessTemplateBundle?.approvalsStats || { total: 8, completed: 6, inProgress: 1, pending: 1 };
@@ -78,11 +78,11 @@ export default function ReportsPage({ showToast, setModalState }) {
   };
 
   const handleGenerateReport = () => {
-    showToast('Generating official compliance dossier report...');
+    showToast('Generating official DGMS compliance dossier report...');
     setTimeout(() => {
       setModalState({
         isOpen: true,
-        title: 'Compliance Executive Dossier (H1 2026)',
+        title: 'Statutory DGMS Compliance Executive Dossier (H1 2026) [DEMO DATA]',
         type: 'report-generate',
         data: {
           company: businessName,
@@ -99,10 +99,10 @@ export default function ReportsPage({ showToast, setModalState }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Reports &amp; Analytics
+            Statutory Reports &amp; Governance Analytics
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            View compliance health analytics, statutory audit reports, and risk summaries.
+            View coal mine statutory compliance analytics, DGMS audit readiness reports, and environmental risk summaries.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export default function ReportsPage({ showToast, setModalState }) {
             className="text-xs font-semibold"
           >
             <FileSpreadsheet className="w-3.5 h-3.5" />
-            <span>Generate Full Dossier</span>
+            <span>Generate DGMS Audit Dossier</span>
           </Button>
         </div>
       </div>

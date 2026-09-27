@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Compliance Task Generation Rules
+ * MINEGUARD AI Business Analysis Engine - Compliance Task Generation Rules
  */
 
 import { getRelativeDueDate } from '../utils/analysisHelpers';

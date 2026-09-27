@@ -1,9 +1,9 @@
 """
-POWER HOUSE — Backend Port Guard & Startup Diagnostic System
+MINEGUARD AI — Backend Port Guard & Startup Diagnostic System
 
 Prevents duplicate backend server instances on port 8000.
 Intercepts socket collisions before Winsock raises [WinError 10013].
-Provides structured diagnostics on PID, process name, POWER HOUSE identity,
+Provides structured diagnostics on PID, process name, MINEGUARD AI identity,
 and /health endpoint telemetry.
 """
 
@@ -96,22 +96,22 @@ def get_process_details(pid: int) -> Dict[str, Any]:
     name_lower = details["name"].lower()
     cmd_lower = details["command_line"].lower()
     if "python" in name_lower or "uvicorn" in name_lower:
-        if "powerhouse" in cmd_lower or "app.main" in cmd_lower or "main:app" in cmd_lower:
-            details["is_powerhouse"] = True
+        if "mineguard" in cmd_lower or "app.main" in cmd_lower or "main:app" in cmd_lower:
+            details["is_mineguard"] = True
 
     return details
 
 
 def query_health_endpoint(host: str = "127.0.0.1", port: int = 8000, timeout: float = 1.0) -> Tuple[bool, Optional[Dict[str, Any]]]:
-    """Ping http://host:port/health to verify if a healthy POWER HOUSE API is running."""
+    """Ping http://host:port/health to verify if a healthy MINEGUARD AI API is running."""
     url = f"http://{host}:{port}/health"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "POWER-HOUSE-PortGuard/1.0"})
+        req = urllib.request.Request(url, headers={"User-Agent": "MINEGUARD-AI-PortGuard/1.0"})
         with urllib.request.urlopen(req, timeout=timeout) as response:
             if response.status == 200:
                 raw = response.read().decode("utf-8")
                 data = json.loads(raw)
-                if data.get("status") == "healthy" and data.get("service") == "power-house-api":
+                if data.get("status") == "healthy" and data.get("service") == "mineguard-api":
                     return True, data
                 return False, data
     except Exception:
@@ -144,7 +144,7 @@ def check_and_guard_port(host: str = "127.0.0.1", port: int = 8000) -> bool:
         return True
 
     # Port is occupied by another process!
-    proc_info = get_process_details(listener_pid) if listener_pid else {"pid": "Unknown", "name": "Unknown", "is_powerhouse": False}
+    proc_info = get_process_details(listener_pid) if listener_pid else {"pid": "Unknown", "name": "Unknown", "is_mineguard": False}
     is_healthy, health_data = query_health_endpoint(host=host, port=port)
 
     # Format diagnostics
@@ -155,13 +155,13 @@ def check_and_guard_port(host: str = "127.0.0.1", port: int = 8000) -> bool:
     print(f"Process Name:    {proc_info['name']}", file=sys.stderr)
 
     if is_healthy:
-        print("Is POWER HOUSE:  YES (power-house-api)", file=sys.stderr)
+        print("Is MINEGUARD AI: YES (mineguard-api)", file=sys.stderr)
         print("Health Status:   HEALTHY (200 OK)", file=sys.stderr)
         print(f"Health Response: {json.dumps(health_data)}", file=sys.stderr)
         print(f"Health URL:      http://{host}:{port}/health", file=sys.stderr)
         print("-" * 70, file=sys.stderr)
         print("DIAGNOSTIC STATUS:", file=sys.stderr)
-        print(f"  A healthy POWER HOUSE backend is already active on http://{host}:{port}.", file=sys.stderr)
+        print(f"  A healthy MINEGUARD AI backend is already active on http://{host}:{port}.", file=sys.stderr)
         print(f"  To prevent duplicate backend instances and socket collisions [WinError 10013],", file=sys.stderr)
         print("  this second Uvicorn instance will NOT be started.", file=sys.stderr)
         print("", file=sys.stderr)
@@ -171,23 +171,23 @@ def check_and_guard_port(host: str = "127.0.0.1", port: int = 8000) -> bool:
         if listener_pid:
             print(f"  * To force restart, stop PID {listener_pid} first:", file=sys.stderr)
             print(f"    powershell: Stop-Process -Id {listener_pid}", file=sys.stderr)
-    elif proc_info.get("is_powerhouse"):
-        print("Is POWER HOUSE:  YES (Stale / Unresponsive process)", file=sys.stderr)
+    elif proc_info.get("is_mineguard"):
+        print("Is MINEGUARD AI: YES (Stale / Unresponsive process)", file=sys.stderr)
         print("Health Status:   UNRESPONSIVE (No response from /health)", file=sys.stderr)
         print(f"Health URL:      http://{host}:{port}/health", file=sys.stderr)
         print("-" * 70, file=sys.stderr)
         print("DIAGNOSTIC STATUS:", file=sys.stderr)
-        print(f"  Port {port} is occupied by a stale POWER HOUSE process (PID: {listener_pid}).", file=sys.stderr)
+        print(f"  Port {port} is occupied by a stale MINEGUARD AI process (PID: {listener_pid}).", file=sys.stderr)
         print("  The process is holding the port but the health endpoint is not responding.", file=sys.stderr)
         print("", file=sys.stderr)
         print("RECOMMENDED ACTIONS:", file=sys.stderr)
         if listener_pid:
             print(f"  * Stop the stale process safely:", file=sys.stderr)
             print(f"    powershell: Stop-Process -Id {listener_pid}", file=sys.stderr)
-        print("  * Or run .\\run.ps1 which recycles stale POWER HOUSE processes automatically.", file=sys.stderr)
+        print("  * Or run .\\run.ps1 which recycles stale MINEGUARD AI processes automatically.", file=sys.stderr)
     else:
-        print("Is POWER HOUSE:  NO (Unrelated external process)", file=sys.stderr)
-        print("Health Status:   NO RESPONSE from POWER HOUSE /health", file=sys.stderr)
+        print("Is MINEGUARD AI: NO (Unrelated external process)", file=sys.stderr)
+        print("Health Status:   NO RESPONSE from MINEGUARD AI /health", file=sys.stderr)
         print(f"Health URL:      http://{host}:{port}/health", file=sys.stderr)
         print("-" * 70, file=sys.stderr)
         print("DIAGNOSTIC STATUS:", file=sys.stderr)

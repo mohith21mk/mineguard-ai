@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Rule Constants & Authority Catalogs
+ * MINEGUARD AI Business Analysis Engine - Rule Constants & Authority Catalogs
  */
 
 export const AUTHORITIES = {

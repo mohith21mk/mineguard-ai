@@ -49,7 +49,7 @@ export default function BusinessIntelligencePreview({ onViewAnalysis, isAnalyzin
         </div>
 
         <p className="text-xs text-slate-400 leading-relaxed mt-4">
-          Based on your business profile, POWER HOUSE can analyze your compliance and approval requirements.
+          Based on your mine profile, MINEGUARD AI can analyze your statutory compliance and approval requirements.
         </p>
 
         {/* 3 Insight Metrics */}

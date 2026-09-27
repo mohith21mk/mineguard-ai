@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Dynamic Business Visual Resolver
+ * MINEGUARD AI Dynamic Business Visual Resolver
  *
  * Resolves category-specific commercial photography assets.
  * Guarantees zero fallback to textile for non-textile businesses.

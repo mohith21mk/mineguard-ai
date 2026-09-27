@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Analysis Helpers
+ * MINEGUARD AI Business Analysis Engine - Analysis Helpers
  */
 
 /**

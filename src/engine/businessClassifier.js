@@ -1,5 +1,5 @@
 /**
- * POWER HOUSE Business Analysis Engine - Business Classifier
+ * MINEGUARD AI Business Analysis Engine - Business Classifier
  *
  * 100% local, deterministic keyword classification.
  * No external AI API, no network calls, no ML model.

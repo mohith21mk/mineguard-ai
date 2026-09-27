@@ -14,11 +14,10 @@ import { BUSINESS_CATEGORIES, CATEGORY_LABELS } from '../../engine/businessClass
 import { getCategoryDefaultName } from '../../utils/businessVisualResolver';
 
 const EXAMPLE_INPUTS = [
-  'I want to start a clothing store in Tiruppur',
-  'I want to start a restaurant in Chennai',
-  'I want to open a flower shop in Coimbatore',
-  'I want to open a gold jewellery shop in Madurai',
-  'I want to manufacture plastic components',
+  'Opencast Coal Mine (OCP) in Dhanbad [DEMO DATA]',
+  'Underground Coal Mine (UGP) in Raniganj [DEMO DATA]',
+  'Coal Washery & Beneficiation Plant in Bilaspur [DEMO DATA]',
+  'Coal Evacuation & Railway Siding in Singrauli [DEMO DATA]',
 ];
 
 export default function BusinessOnboarding() {
@@ -79,9 +78,9 @@ export default function BusinessOnboarding() {
         {/* Brand mark */}
         <div className="flex items-center justify-center gap-2.5 mb-6">
           <div className="w-10 h-10 rounded-xl overflow-hidden bg-black border border-amber-500/30 flex items-center justify-center shadow-lg shadow-amber-500/10 shrink-0 p-0.5">
-            <img src="/logo.png" alt="POWER HOUSE" className="w-full h-full object-contain" />
+            <img src="/logo.png" alt="MINEGUARD AI" className="w-full h-full object-contain" />
           </div>
-          <span className="text-base font-bold text-white tracking-wide uppercase">POWER HOUSE</span>
+          <span className="text-base font-bold text-white tracking-wide uppercase">MINEGUARD AI</span>
         </div>
 
         <div className="bg-[#111827] rounded-2xl border border-[#1E293B] shadow-2xl p-6 sm:p-8">
@@ -89,20 +88,19 @@ export default function BusinessOnboarding() {
             <div className="space-y-5">
               <div className="text-center space-y-1.5">
                 <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-                  Tell us about your business
+                  Tell us about your mining operation
                 </h1>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                  Describe your business in your own words and we&apos;ll prepare the relevant
-                  compliance roadmap.
+                  Describe your coal mine site or lease and MINEGUARD AI will assemble the relevant DGMS statutory compliance roadmap.
                 </p>
               </div>
 
               <textarea
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                placeholder="e.g. I want to start a clothing store in Tiruppur"
+                placeholder="e.g. Opencast Coal Mine (OCP) in Dhanbad with 3.5 MTPA capacity [DEMO DATA]"
                 rows={4}
-                className="w-full px-4 py-3 text-sm rounded-xl border border-slate-700 bg-[#141C2B] text-slate-100 focus:border-blue-500 focus:outline-none resize-none placeholder:text-slate-500"
+                className="w-full px-4 py-3 text-sm rounded-xl border border-slate-700 bg-[#141C2B] text-slate-100 focus:border-amber-500 focus:outline-none resize-none placeholder:text-slate-500"
               />
 
               <div className="space-y-2">

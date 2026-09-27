@@ -318,7 +318,7 @@ export default function WorkforcePage({ showToast, _onNavigate, _setModalState }
                 Ethical Workforce AI Guardrails Enforced
               </h4>
               <p className="text-slate-300 leading-relaxed">
-                POWER HOUSE operates under strict privacy and non-punitive governance. Staff profiles use synthetic reference codes (e.g. <span className="font-mono text-teal-300">EMP-TX-101</span>). The system does not evaluate compensation, rank human workers against each other, or make automated hiring or termination decisions. Recommendations are strictly focused on capability building, accessibility accommodations, and statutory safety readiness.
+                MINEGUARD AI operates under strict privacy and non-punitive governance. Staff profiles use synthetic reference codes (e.g. <span className="font-mono text-teal-300">EMP-MN-101</span>). The system does not evaluate compensation, rank human workers against each other, or make automated hiring or termination decisions. Recommendations are strictly focused on capability building, accessibility accommodations, and statutory safety readiness under Mines Vocational Training Rules 1966.
               </p>
             </div>
           </div>

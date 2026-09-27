@@ -114,10 +114,10 @@ export default function DocumentsPage({ showToast, setModalState }) {
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
           <h1 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Documents Vault
+            Mine Compliance Documents Vault
           </h1>
           <p className="text-xs sm:text-sm text-slate-400 mt-0.5">
-            Securely manage and track all business statutory licenses and compliance filings.
+            Securely manage and track all coal mine statutory clearances, DGMS permissions, and environmental filings.
           </p>
         </div>
 
@@ -128,7 +128,7 @@ export default function DocumentsPage({ showToast, setModalState }) {
           className="self-start sm:self-auto text-xs font-semibold"
         >
           <UploadCloud className="w-3.5 h-3.5" />
-          <span>Upload Document</span>
+          <span>Upload Clearance / Permit</span>
         </Button>
       </div>
 
